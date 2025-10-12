@@ -3,6 +3,7 @@ package com.bank.bank_account_service.web;
 import com.bank.bank_account_service.dto.BankAccountRequestDTO;
 import com.bank.bank_account_service.dto.BankAccountResponseDTO;
 import com.bank.bank_account_service.entities.BankAccount;
+import com.bank.bank_account_service.mappers.BankAccountMapper;
 import com.bank.bank_account_service.repositories.BankAccountRepository;
 import com.bank.bank_account_service.service.BankAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class AccountRestController {
 
     @Autowired
     private BankAccountService bankAccountService;
+
+    @Autowired
+    private BankAccountMapper bankAccountMapper;
 
     @GetMapping("/bankAccounts")
     public List<BankAccount> getAllAccountBank(){
