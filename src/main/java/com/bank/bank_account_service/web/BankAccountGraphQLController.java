@@ -42,9 +42,8 @@ public class BankAccountGraphQLController {
     }
 
     @MutationMapping
-    public boolean deleteAccount(@Argument String id){
+    public void deleteAccount(@Argument String id){
          bankAccountRepository.deleteById(id);
-        return true;
     }
 
 
